@@ -6,18 +6,8 @@
 	<body>
 		
 		<?php
-			$con = pg_connect("host=localhost dbname=hr user=education password=knowlege");
-			$guery = "SELECT employee_id, last_name, salary FROM employees";
-			$result = pg_query($guery);
-			echo "<table>";
-			while ($line = pg_fetch_array ($result, null, PGSQL_ASSOC)){
-				echo "<tr>";
-				echo "<td> <a href='/emp.php?id=" . $line["employee_id"] . "'>" . $line["last_name"] . "</a></td><td>" . $line["salary"] . "</td>";
-				echo "</tr>";
-			}
-			pg_close($con);
-			echo "</table>";
-			
+			include 'db.php';
+			empList($conStr);
 			
 		?>
 			<form action = "add.php" method = "get">

@@ -6,8 +6,8 @@
 	<body>
 		
 		<?php
-			include 'db.php';
-			emp($conStr);
+			$id = $_POST['id'];
+			echo $id;
 		?>
 		
 	</body>
