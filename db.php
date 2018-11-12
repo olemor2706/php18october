@@ -12,6 +12,7 @@ function empList ($connect){
 		"<td> <form method = 'post' action = 'dismiss.php'> ".
 		"<input type = 'hidden' name = 'id' value = '" . $line["employee_id"] . "'> </input>".
 		"<input type = 'submit' value = 'Уволить'> </input> </form> </td>";
+		
 		echo "</tr>";
 	}
 	pg_close($con);
