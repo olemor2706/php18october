@@ -1,0 +1,21 @@
+[{"employee_id":100,
+"first_name":"Steven",
+"last_name":"King",
+"email":"SKING",
+"phon_number":"1111111111",
+"hire_date":"17-JUN-87",
+"job_id":"AD_RES",
+"salary":"24000",
+"departent_id":"90"
+},
+
+{"employee_id":102,
+"first_name":"Lex",
+"last_name":"De Haan",
+"email":"LDEHAAN",
+"phon_number":"222222222",
+"hire_date":"13-JAN-93",
+"job_id":"AD_VP",
+"salary":"17000",
+"departent_id":"90"
+}]

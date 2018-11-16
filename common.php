@@ -2,13 +2,13 @@
 $conStr = pg_connect("host=localhost dbname=hr user=education password=knowledge");
 
 function loadNew (){
-	$query = "SELECT first_name, last_name FROM seekers WHERE status = 'new'";
+	$query = "SELECT seeker_id, first_name, last_name FROM seekers WHERE status = 'new'";
 	$result = pg_query($query);
 	echo "<table>";
 	while ($line = pg_fetch_array ($result, null, PGSQL_ASSOC)){
 		echo "<tr>";
 		echo "<td>" . $line["last_name"] . "</td><td>" . $line["first_name"] . "</td>" .
-		"<td> <form method = 'post' action = 'hr_approved.php'> ".
+		"<td> <form method = 'post' action = 'hr_approve.php'> ".
 		"<input type = 'hidden' name = 'id' value = '" . $line["seeker_id"] . "'> </input>".
 		"<input type = 'submit' value = 'Кадры дают добро'> </input> </form> </td>";
 		echo "</tr>";
@@ -23,7 +23,7 @@ function loadApproved (){
 	while ($line = pg_fetch_array ($result, null, PGSQL_ASSOC)){
 		echo "<tr>";
 		echo "<td>" . $line["last_name"] . "</td><td>" . $line["first_name"] . "</td>" .
-		"<td> <form method = 'post' action = 'tech_approved.php'> ".
+		"<td> <form method = 'post' action = 'tech_approve.php'> ".
 		"<input type = 'hidden' name = 'id' value = '" . $line["seeker_id"] . "'> </input>".
 		"<input type = 'submit' value = 'Техники дают добро'> </input> </form> </td>";
 		echo "</tr>";
