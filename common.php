@@ -41,8 +41,8 @@ class JobSeeker {
 		$status = "new";
 		$lastName = pg_escape_string ($lastName);
 		$firstName = pg_escape_string ($firstName);
-		$guery = "INSERT INTO seekers (first_name, last_name, status)".
-			"VALUES ($firstName, $lastName, $status);";
+		$query = "INSERT INTO seekers (first_name, last_name, status) VALUES ('" . 
+			$firstName . "', '" . $lastName . "', '" . $status . "');";
 		pg_query($query);
 	}
 	
