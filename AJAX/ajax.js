@@ -1,9 +1,24 @@
-function buttom1() {
+/*function buttom1() {
 	msgScr(get("file1.html"));
+}*/
+
+function buttom1() {
+	$.get("file1.html", function(data){
+		msgScr(data);
+	})
+	
 }
 
-function buttom2() {
+/*function buttom2() {
 	msgScr(get("file2.html"));
+}*/
+
+function buttom2() {
+	$.get("file111.html", function(data){
+		msgScr(data);
+	}).fail(function(){
+		$("#msg").html("Не удалось получить данные");
+	})
 }
 
 function buttom3() {
@@ -53,8 +68,10 @@ function data3 () {
 	"<br>Контактный телефон: <br>- " + obj1.phon_number[0] + "<br>- " + obj1.phon_number[1]);
 }
 
-var butt = document.getElementById("submit1");
-butt.onclick = buttom1;
+/*var butt = document.getElementById("submit1");
+butt.onclick = buttom1;*/
+
+$("#submit1").click(buttom1);
 
 var butt = document.getElementById("submit2");
 butt.onclick = buttom2;
