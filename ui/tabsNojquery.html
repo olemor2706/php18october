@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8"/>
+		<title> Пример горизонтальных вкладок без jQuery</title>
+		<style>
+			li {
+				display:inline-block;
+			}
+		</style>
+	</head>
+	<body>
+		<div id="tabsId">
+			<ul>
+				<li><a id="tabs-a" href="#tabs-a"> Tab A </a></li>
+				<li><a id="tabs-b" href="#tabs-b"> Tab B </a></li>
+				<li><a id="tabs-c" href="#tabs-c"> Tab C </a></li>
+			</ul>
+		
+			<div id="msg1"> Tab A</div>
+			<div id="msg2" hidden="hidden"> Tab B</div>
+			<div id="msg3" hidden="hidden"> Tab C</div>
+			
+		</div>
+		
+		<script src="tabsNojquery.js"> </script>			
+	</body>
+</html>
